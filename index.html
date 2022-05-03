@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Single Page Aplication</title>
+    <!-- title -->
+    <link href="style.css" rel="stylesheet" />
+    <!-- links the CSS and the JS files to the html to be used  -->
+    <link rel="icon" type="image/png" href="img/bulb.png" />
+    <!--  changes the icon on the aplication -->
+    <script src="WebApplication1/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="WebApplication1/Scripts/app.js"></script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>Single Page Aplication</h1>
+            <!-- the header  -->
+        </div>
+    </header>
+    <nav id="nav-bar">
+        <div class="container">
+            <gn>
+                <gf><a href="index.html">home page</a></gf>
+                <!-- link that when pressed links you back to the main and only html. refreshing the page  -->
+                <button onclick="aboutUs()">about us</button>
+                <!-- performs the about us function in the js page -->
+                <button onclick="services()">services</button>
+                <!--  performs the services function in the js page -->
+                <button onclick="contact()">contact</button>
+                <!-- performs the contact function in the js page -->
+            </gn>
+        </div>
+    </nav>
+
+    <div id="login">
+        <h1>Welcome To</h1>
+        <h1>Student Study Helper</h1>
+        <ul>(pattern pending)</ul>
+        <!-- the header of the long in page  -->
+        <input type="text" id="username" placeholder="Username" />
+        <!--  text box with the placeholder username propting the user to type in there username to be checked later -->
+        <input type="password" id="password" placeholder="Password" />
+        <!-- text box with the placeholder password propting the user to type in there password to be checked later futhermore hides what is being typed so other cant see what is being typed -->
+
+        <button onclick="UsernameAndPassword()">ENTER</button>
+        <!--  the enter button that when pressed performs the UsernameAndPassword function -->
+    </div>
+    <!-- log in page DIV -->
+    <div id="StudyForTitle" style="display:none;">
+        <h1>How Long Would You Like To Study For?</h1>
+        <!-- new title for the main page -->
+        <br />
+        <!-- break/pause in the code -->
+        <div>
+            <label for="studyTimeBoi">hours</label>
+            <select name="studyTimeBoi" id="studyTimeBoi">
+                <option label="1">1</option>
+                <option label="2">2</option>
+                <option label="3">3</option>
+                <option label="4">4</option>
+                <option label="5">5</option>
+                <option label="6">6</option>
+                <option label="7">7</option>
+                <option label="8">8</option>
+                <option label="9">9</option>
+                <option value="10">10</option>
+                <option label="11">11</option>
+                <option label="12">12</option>
+                <option label="13">13</option>
+                <option label="14">14</option>
+                <option label="15">15</option>
+                <option label="16">16</option>
+                <option label="17">17</option>
+                <option label="18">18</option>
+                <option label="19">19</option>
+                <option label="20">20</option>
+                <option label="21">21</option>
+                <option label="22">22</option>
+                <option label="23">23</option>
+                <option label="24">24</option>
+
+                <!-- options in a slecter from number 1-24 to represent the hours in a day  -->
+
+            </select>
+        </div>
+        <!-- hour picker DIV  -->
+    </div>
+    <div class="box" id="box" style="display:none;">
+        <!--  added and class to determin what is is, a ID to call it and style set to display none so it is not visible or assesable to the user unless ertain criteria has been met -->
+        <div class="slider">
+            <input type="range" min="1" max="24" value="1" class="slider" id="myRange" />
+            <div class="value">12</div>
+            <!-- adds a slider that can be changed to determin a number of hours wished to study ranged form 1 - 24
+            also works in corilation with the picker above-->
+
+        </div>
+        <script>
+            const slider = document.querySelector("#myRange");
+            const value = document.querySelector(".value");
+            value.textContent = slider.value;
+            slider.oninput = function () {
+                value.textContent = this.value;
+                studyTimeBoi.value = this.value;
+            }
+            studyTimeBoi.oninput = function () {
+                value.textContent = this.value;
+                slider.value = this.value;
+            }
+        </script>
+        <!-- script that allows the slider to work-->
+    </div>
+    <div id="OptinalPicks" style="display:none;">
+        <!--  added an  ID to call it and style set to display none so it is not visible or assesable to the user unless ertain criteria has been met -->
+
+        <h1 id="OptinalPicksTitle">Would You Like A...</h1>
+        <ul id="OptinalPicksItems">
+            <li id="item1">Lunch Break<button onclick="change5()">no</button><button onclick="change1()">yes</button></li>
+            <li id="item2">Water Break<button onclick="change6()">no</button><button onclick="change2()">yes</button></li>
+            <li id="item3">Mental Break<button onclick="change7()">no</button><button onclick="change3()">yes</button></li>
+            <li id="item4">Lesuire Time<button onclick="change8()">no</button><button onclick="change4()">yes</button></li>
+        </ul>
+        <!-- added buttons that alow the 4 options to be selected at will, or unselected by pressing yes or no-->
+    </div>
+    <div class="color-picker" id="color-picker" style="display:none;">
+        <!--  added and class to determin what is is, a ID to call it and style set to display none so it is not visible or assesable to the user unless ertain criteria has been met -->
+        <br />
+        <input type="color" id="hue1" name="hue1" value="#f3c612" />
+        <!-- adds a color picker called hue1 and sets it a value to start with-->
+        <br />
+        <!-- add a gap. break inbetween each color picker so they are al seprate ines-->
+        <input type="color" id="hue2" name="hue2" value="#cb1f8e" />
+        <!-- adds a color picker called hue2 and sets it a value to start with-->
+        <br />
+        <input type="color" id="hue3" name="hue3" value="#49df62" />
+        <!-- adds a color picker called hue3 and sets it a value to start with-->
+        <br />
+        <input type="color" id="hue4" name="hue4" value="#24f6f9" />
+        <!-- adds a color picker called hue4 and sets it a value to start with-->
+        <br />
+
+    </div>
+    <div id="start-time" style="display:none">
+        <button onclick="createHours()">Start Time</button>
+        <!-- a button that when pressed will enicate the study time-->
+    </div>
+    <div id="picture" style="display:none;">
+        <h1>We know studdying can be hard</h1>
+        <!-- tital -->
+        <img src="StudyImage.jpeg" alt="study image meme">
+        <!-- adds a picture stored from my local files -->
+        <p>Thats why i diseigned this website to help you organise your time better when studdying.</p>
+        <!-- added paragrath explain to the user about the project-->
+    </div>
+    <div id="contacts" style="display:none;">
+        <p>Name: Owen Fiddy</p>
+        <p>Email: fiddyowen@gmail.com</p>
+        <!-- added paragrath explain to the user about the project-->
+        <a href="https://www.youtube.com/channel/UCQnalSxp9AW4iaxorV1jsgw" target="_blank">Vist My YouTube Page</a>
+        <!-- link on website that when pressed opens a new tab by useing target _blank. and in this tab is a link to my personal youtube channle-->
+        <br />
+
+        <img src=" love.gif" alt="oh noooo">
+        <!-- adds a gif stored from my local files -->
+
+    </div>
+    <div id="study" style="display:none">
+        <big>STUDY</big>
+    </div>
+    <div id="lunch" style="display:none">
+        <big>lunch </big>
+    </div>
+    <div id="water" style="display:none">
+        <big>water</big>
+    </div>
+    <div id="lessure" style="display:none">
+        <big>lessure</big>
+    </div>
+    <div id="mental" style="display:none">
+        <big>mental</big>
+    </div>
+    <div id="finish" style="display:none">
+        <big>finish</big>
+    </div>
+    <!-- big letters that appre on screen when its time to-->
+</body>
+</html>
