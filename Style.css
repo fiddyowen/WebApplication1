@@ -1,0 +1,130 @@
+﻿body {
+
+    background-image: url(galax.gif);
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+.container
+{
+    width: 80%;
+    margin:auto;
+    overflow:hidden;
+
+}
+#contacts a {
+    color: white;
+}
+#main-header {
+    background-color: coral;
+    color: #ffffff;
+    text-align: left;
+}
+#nav-bar {
+    background-color:antiquewhite;
+    color: #ffffff;
+    text-align: left;
+}
+#nav-bar a
+{
+    color: #000000;
+    text-decoration:none;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.signUpPage
+{
+    color: white;
+    padding: 200px;
+}
+
+ul {
+    list-style-type: none;
+    max-width: 300px;
+    margin: 20px auto;
+}
+li
+{
+    min-height: 20px;
+    text-align: left;
+    background-color: white;
+    color: gray;
+    padding: 5px;
+    margin-block: 5px;
+}
+gf
+{
+    padding: 0;
+    list-style:none;
+}
+gn
+{
+    display:inline;
+}
+    gn button {
+        background: none;
+        border: none;
+        color: #000000;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+big {
+    color: #ffffff;
+    font-size: 120px;
+}
+li button
+{
+    float: right;
+    margin: 0px 3px;
+}
+li .checkbox {
+    float: right;
+    margin: 0px 3px;
+}
+.color
+{
+    background-color: lawngreen;
+}
+.box
+{
+align-items:center;
+}
+.box .value{
+    color:aquamarine;
+}
+
+[type='color']
+{
+    padding: 0;
+    margin: 5px;
+    border: none;
+    width: 26px;
+    height: 26px;
+}
+
+[type='color']::-webkit-color-swatch-wrapper 
+{
+    padding:0;
+    border: none;
+
+}
+[type='color'] ::-webkit-color-swatch
+{
+    padding: 0;
+    border:none;
+}
+.color-picker
+{
+    border: none;
+    padding: 0;
+    background:none;
+    height: 160px;
+    width: 60px;
+    position:absolute;
+    left: 925px;
+    top: 322px;
+}

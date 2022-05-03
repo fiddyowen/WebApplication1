@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{28D7A09D-EF67-4A91-8F08-B25C2AE97207}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wwwroot.", "wwwroot.", "{D0B903AF-949F-48A8-847B-EB67C532F894}"
+	ProjectSection(SolutionItems) = preProject
+		aboutUs.html = aboutUs.html
+		contact.html = contact.html
+		DnD.html = DnD.html
+		index.html = index.html
+		services.html = services.html
+		Style.css = Style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{4B87BEBF-DF02-47A2-8134-AA3DD40D0893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{211A3E3F-8FE2-46E3-BA74-0C841B7BB71D}"
+	ProjectSection(SolutionItems) = preProject
+		singUp.html = singUp.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{B09E1F78-A35A-4024-B0FF-DED061ECEFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28D7A09D-EF67-4A91-8F08-B25C2AE97207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D7A09D-EF67-4A91-8F08-B25C2AE97207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D7A09D-EF67-4A91-8F08-B25C2AE97207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D7A09D-EF67-4A91-8F08-B25C2AE97207}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B87BEBF-DF02-47A2-8134-AA3DD40D0893} = {D0B903AF-949F-48A8-847B-EB67C532F894}
+		{211A3E3F-8FE2-46E3-BA74-0C841B7BB71D} = {D0B903AF-949F-48A8-847B-EB67C532F894}
+		{B09E1F78-A35A-4024-B0FF-DED061ECEFDC} = {D0B903AF-949F-48A8-847B-EB67C532F894}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78FF4042-47FF-44ED-8FFC-040710E26E9A}
+	EndGlobalSection
+EndGlobal
